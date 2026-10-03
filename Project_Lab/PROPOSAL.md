@@ -10,10 +10,10 @@ Secret Spot: Surf Forecasting for Uncharted Breaks via Graph-Based Wave Refracti
 
 ## Research Question
 
-On two surf trips to Nicaragua, I was talking to the surf hostel owner about how there are no surf reports there and he said they rely on old school weather and wave pattern prediciton.
-This inspired me to consider a program that can give a surf report for less known breaks locally and international areas without forecasting abilities.
+On a surf trip in Nicaragua, I was talking to the hostel owner about how there are no surf reports there and he said they rely on old school weather and wave pattern prediciton.
+This inspired me to consider a program that can give a surf report for lesser known breaks locally and international areas without forecasting abilities.
 Commercial forecasts like Surfline's LOTUS are propreitary and cover known spots.  HopeWaves (Rhode Island specific) shows that a free NOAA WaveWatch III data plus local tuning and surfer feedback can produce a reliable forecast.
-I talked to my good friend Brennan Phillips who is an oceanographic engineer and surfer in Rhode Island and he told me that spectral density can be best predictor of a good wave to surf
+I talked to my good friend Brennan Phillips (an oceanographic engineer and surfer in Rhode Island) and he told me that spectral density can be best predictor of a good wave to surf.
 My core question for this project is if seafloor shape (bathymetry), combined with buoy wave energy and wind, predict which swells will produce surf at a beach that has no existing forecast.
 What's innovative about my project would be using a graph shortest-path algorithm to trace how swell bends over the seafloor toward any user-chosen point ("drop a pin").
 
@@ -50,22 +50,21 @@ Stretch goal (if time allows): analog forecasting using dynamic time warping to 
 
 ### Prototype data
 
-- Synthetic seafloor grids built in code, each with a known expected result:
+Synthetic seafloor grids built in code, each with a known expected result:
   1. Flat bottom: wave paths should stay straight at any angle.
   2. Single shallow mound: paths should converge (focus) behind the mound.
   3. Gentle slope toward a straight beach: paths should turn to meet the shore nearly head-on.
-- Then real data for 2–3 spots (Pine Point, ME, a negative control in ME, and Narragansett, RI), then one Nicaraguan spot (The Boom in Aposentillo).
+Then real data for 2–3 spots (Pine Point, ME, a negative control in ME, and Narragansett, RI), then one Nicaraguan spot (The Boom in Aposentillo).
 
 ---
 
 ## Success Criteria
 
-Notes:
-- Expected outputs: swell-direction profile per spot, a focusing map, and a simple rating that combines swell and wind.
-- Checks:
+Expected outputs: swell-direction profile per spot, a focusing map, and a simple rating that combines swell and wind.
+Checks:
   1. Synthetic grids behave as physics predicts (straight / focusing / turning).
   2. Maine spot profiles match Surfline's listed best swell directions, including at least one sheltered spot where the model should say "blocked" (negative control).
-- Hypothesis to test: good surf at Pine Point coincides with buoy peak spectral energy above ~2 m²/Hz *and* a long enough period (e.g., > ~9 s).
+Hypothesis to test: good surf at Pine Point coincides with buoy peak spectral energy above ~2 m²/Hz AND a long enough period (ie, > ~7 s).
 
 ---
 
@@ -94,25 +93,25 @@ Notes:
 
 ```
 Projet_Lab/
-├── README.md            # overview + Quick Start (Part 4)
-├── PROPOSAL.md          # this document
+├── README.md            # Part 4 of project structure, final release
+├── PROPOSAL.md          # Part 1 of Project Structure (this document)
 ├── data/
 │   ├── synthetic/       # generated test grids
 │   ├── raw/             # downloaded bathymetry, buoy, wind files
 │   └── processed/
 ├── src/
-│   ├── grid.py          # build grid graph from depths
-│   ├── refraction.py    # multi-source Dijkstra
-│   ├── scoring.py       # swell + wind rating
-│   └── fetch_data.py    # download helpers
+│   ├── grid.ipynb          # build grid graph from depths
+│   ├── refraction.ipynb    # multi-source Dijkstra
+│   ├── scoring.ipynb       # swell + wind rating
+│   └── fetch_data.ipynb    # download helpers
 ├── tests/               # synthetic-grid tests
 ├── notebooks/           # exploration and figures
-└── docs/                # progress reports (Parts 2–3), figures
-```
+└── PSEUDOCODE.md        # Part 2 of project structure, conceptual Progress Report
+└── PROTOTYPE.md         # Part 3 of project structure, implemetation Progress Report
 
 ---
 
 ## Generative AI Disclosure
 
 Anthropic Claude opus 5 was used in creating this proposal.  
-I gave Claude the list of algorithms we will cover in the class and gave a detailed idea of my secret spot surf forecast program and asked if would fit in any of those algorithm classes.  Claude said that my bathymetry question fits nicely into Djikstra's graph algorithms. I fed Claude all of the information I received from my oceanographic engineer surfer friend about wave refraction and spectral density, so that it could help me flesh out the proposal more soundly. Since we haven't covered graph algorithms yet in class (next lesson), I had Claude explain Djikstra's graph algorithms to me and help me write the pitfalls section.  All proposal text and ideas are original and written by me.
+I gave Claude the list of algorithms we will cover in the class and gave a detailed idea of my secret spot surf forecast program, focusing on predicting surf reports based on how the water is moving (buouy data) over bathymetry data, and asked if would fit in any of those algorithm classes.  Claude said that my bathymetry question fits nicely into Djikstra's graph algorithms. I fed Claude all of the information I received from my oceanographic engineer surfer friend about wave refraction and spectral density, so that it could help me flesh out the proposal more soundly. Since we haven't covered graph algorithms yet in class (next lesson), I relied on Claude to explain Djikstra's graph algorithms to me and help me write the algorirthm and pitfalls section.  All proposal text and ideas are original and written by me.
