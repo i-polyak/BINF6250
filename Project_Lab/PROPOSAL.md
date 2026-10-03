@@ -19,6 +19,7 @@ I will validate the program in Maine and Rhode Island, then at The Boom in Nicar
 ## Algorithm and Algorithm Class
 
 **Class:** Graph algorithms
+
 **Algorithm:** Multi-source Dijkstra's shortest path on a grid graph
 
 Bathymetry data is already a grid of depths, so it maps directly onto a graph. Each cell is a node, and neighboring cells are connected by edges. Waves follow the path of least travel time and slow down in shallow water, so finding how swell bends (refracts) toward a beach is a shortest-path problem, with depth setting the travel time. Dijkstra's algorithm runs in O(N log N) time, fast enough to analyze any dropped pin across all swell directions. The other algorithm classes in the course model sequences or patterns over time, while this question is about how swell moves through space.
