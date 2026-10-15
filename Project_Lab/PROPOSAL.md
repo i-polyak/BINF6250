@@ -139,7 +139,6 @@ Project_Lab/
 ├── PROPOSAL.md          # Part 1: this document
 ├── PSEUDOCODE.md        # Part 2: conceptual progress report
 ├── PROTOTYPE.md         # Part 3: implementation progress report
-├── LICENSE
 ├── .gitignore
 ├── data/
 │   ├── synthetic/       # generated test grids
@@ -159,4 +158,4 @@ Project_Lab/
 ## Generative AI Disclosure
 
 Anthropic Claude opus 5.5 was used in creating this proposal.  
-I described my idea for a surf forecasting program based on how swell moves over bathymetry, gave Claude the list of algorithm classes covered in the course, and asked which would fit. Claude suggested wave refraction modeled with Dijkstra's shortest-path algorithm (graph algorithms). I fed Claude all of the information I received from my oceanographic engineer surfer friend about wave refraction and spectral density, so that it could help me flesh out the proposal more soundly. Since we haven't covered graph algorithms yet in class (next lesson), I relied on Claude to explain Djikstra's graph algorithms to me and how it would work with my project idea.  Claude help me write the algorirthm and pitfalls section.  All proposal text and ideas are original.
+I described my idea for a surf forecasting program based on how swell moves over bathymetry, gave Claude the list of algorithm classes covered in the course, and asked which would fit. Claude suggested wave refraction modeled with Dijkstra's shortest-path algorithm (graph algorithms). I fed Claude all of the information I received from my oceanographic engineer surfer friend about wave refraction and spectral density, so that it could help me flesh out the proposal more soundly. Since we haven't covered graph algorithms yet in class (next lesson), I relied on Claude to explain Djikstra's graph algorithms to me and how it would work with my project idea.  Claude help me write the algorirthm, prototype plan, and pitfalls section.  All proposal text and ideas are original.
