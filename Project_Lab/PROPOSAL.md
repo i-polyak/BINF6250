@@ -10,7 +10,7 @@ Commercial forecasts such as Surfline's LOTUS model are proprietary and only cov
 
 **Core question:** Can seafloor shape (bathymetry), combined with buoy wave energy and wind, predict which swells will produce surf at a beach that has no existing forecast?
 
-*What's innovative:** using a graph shortest-path algorithm to trace how swell bends over the seafloor toward any user-chosen point ("drop a pin").
+**What's innovative:** using a graph shortest-path algorithm to trace how swell bends over the seafloor toward any user-chosen point ("drop a pin").
 
 I will validate the program in Maine and Rhode Island, then at The Boom in Nicaragua, a well-known break whose conditions are documented. Once validated, the tool can be applied to the many undocumented breaks nearby in Nicaragua, as well as new spots in Maine I want to scout.
 
