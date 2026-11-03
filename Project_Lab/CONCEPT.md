@@ -619,3 +619,8 @@ and offshore wind returns "worth checking").
 Javaid, A. Understanding Dijkstra’s Algorithm. IEEE.
 
 # Generative AI Disclosure
+Anthropic Claude (Opus 5.5) was used in organizing all of the data in this project.  I have been keeping notes in .xls, .txt, and .docx files as I have been working on the project and fed them to Claude to organize for the report.
+
+I have been treating Claude as my editor and submitted each section and ask "have I missed anything?".  Claude helped format each section so that I had nice tables instead of paragraphs and added the last 5 new pitfalls.
+
+I have been using the referenced paper, as well as other YouTube lectures on Dijkstra, and conversations with my good surfer friend who is an oceanographic engineer to create the ideas in this report and I run them by Claude to confirm if it might work or definitely not work.
