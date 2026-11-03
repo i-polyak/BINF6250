@@ -10,7 +10,7 @@ Commercial forecasts such as Surfline's LOTUS model are proprietary and only cov
 
 **Core question:** Can seafloor shape (bathymetry), combined with buoy wave energy and wind, predict which swells will produce surf at a beach that has no existing forecast?
 
-*What's innovative:** using a graph shortest-path algorithm to trace how swell bends over the seafloor toward any user-chosen point ("drop a pin").
+**What's innovative:** using a graph shortest-path algorithm to trace how swell bends over the seafloor toward any user-chosen point ("drop a pin").
 
 I will validate the program in Maine and Rhode Island, then at The Boom in Nicaragua, a well-known break whose conditions are documented. Once validated, the tool can be applied to the many undocumented breaks nearby in Nicaragua, as well as new spots in Maine I want to scout.
 
@@ -139,7 +139,6 @@ Project_Lab/
 ├── PROPOSAL.md          # Part 1: this document
 ├── PSEUDOCODE.md        # Part 2: conceptual progress report
 ├── PROTOTYPE.md         # Part 3: implementation progress report
-├── LICENSE
 ├── .gitignore
 ├── data/
 │   ├── synthetic/       # generated test grids
@@ -159,4 +158,4 @@ Project_Lab/
 ## Generative AI Disclosure
 
 Anthropic Claude opus 5.5 was used in creating this proposal.  
-I described my idea for a surf forecasting program based on how swell moves over bathymetry, gave Claude the list of algorithm classes covered in the course, and asked which would fit. Claude suggested wave refraction modeled with Dijkstra's shortest-path algorithm (graph algorithms). I fed Claude all of the information I received from my oceanographic engineer surfer friend about wave refraction and spectral density, so that it could help me flesh out the proposal more soundly. Since we haven't covered graph algorithms yet in class (next lesson), I relied on Claude to explain Djikstra's graph algorithms to me and how it would work with my project idea.  Claude help me write the algorirthm and pitfalls section.  All proposal text and ideas are original.
+I described my idea for a surf forecasting program based on how swell moves over bathymetry, gave Claude the list of algorithm classes covered in the course, and asked which would fit. Claude suggested wave refraction modeled with Dijkstra's shortest-path algorithm (graph algorithms). I fed Claude all of the information I received from my oceanographic engineer surfer friend about wave refraction and spectral density, so that it could help me flesh out the proposal more soundly. Since we haven't covered graph algorithms yet in class (next lesson), I relied on Claude to explain Djikstra's graph algorithms to me and how it would work with my project idea.  Claude help me write the algorirthm, prototype plan, and pitfalls section.  All proposal text and ideas are original.
