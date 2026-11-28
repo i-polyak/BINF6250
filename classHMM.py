@@ -196,7 +196,6 @@ class HMM:
             (['G', 'G', 'G', 'G', 'G', 'G', 'G', 'G', 'G'], -13.9291)
         """
         #SETUP
-        observations = observations.upper() #Capitalizes all letters in case DNA sequence is in small letters
         self.check_observations(observations)  #stops with an error if the sequence is empty or has an unknown symbol
         num_states = len(self.states)  #how many states there are, i.e. 2
         num_positions = len(observations)  #how many symbols are in observations, i.e. 9
